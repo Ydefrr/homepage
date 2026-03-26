@@ -48,23 +48,15 @@ body {
 h1 {
     font-size: 1.8rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.del-text {
-    text-decoration: line-through;
-    color: #888;
-    margin-right: 5px;
+.content p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
 }
 
-.underline-link {
-    color: var(--link-color);
-    text-decoration: none;
-    border-bottom: 2px solid var(--link-color);
-    font-weight: bold;
-}
-
-/* 社交图标样式 */
+/* 社交链接样式 */
 .social-links {
     margin-top: 3rem;
     display: flex;
@@ -80,6 +72,30 @@ h1 {
 
 .social-links a:hover {
     opacity: 0.6;
+    text-decoration: underline;
+}
+
+/* 邮箱链接样式 */
+.email-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #f6f8fa;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+}
+
+.email-link:hover {
+    background-color: #eaecef;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-decoration: none;
 }
 
 /* 响应式调整 */
