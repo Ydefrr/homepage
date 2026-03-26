@@ -41,19 +41,37 @@ body {
 /* 内容区域 */
 .content {
     margin-top: 100px;
-    line-height: 1.8;
+    line-height: 2;
     font-size: 1.25rem;
 }
 
 h1 {
     font-size: 1.8rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .content p {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
+    margin: 0;
+    font-size: 1.15rem;
+    position: relative;
+    padding-left: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.content p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* 社交链接样式 */
@@ -67,35 +85,32 @@ h1 {
 .social-links a {
     color: var(--text-color);
     font-size: 1.5rem;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links a:hover {
-    opacity: 0.6;
-    text-decoration: underline;
+    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
-/* 邮箱链接样式 */
+/* 邮箱链接样式 - 与 GitHub 图标保持一致 */
 .email-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: #f6f8fa;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 1.5rem;
 }
 
 .email-link:hover {
-    background-color: #eaecef;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    transform: translateY(-2px);
 }
 
 /* 响应式调整 */
